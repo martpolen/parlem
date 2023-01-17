@@ -4,3 +4,5 @@
 
 /src/parlem-api/parlem.api/parlem.api/bin/Debug/netcoreapp3.1
 /src/parlem-api/parlem.api/parlem.api/obj
+/src/parlem.web/bin/Debug/netcoreapp3.1
+/src/parlem.web/obj
