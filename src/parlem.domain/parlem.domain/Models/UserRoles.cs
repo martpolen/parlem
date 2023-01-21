@@ -1,4 +1,4 @@
-﻿namespace JWTAuthentication.Authentication
+﻿namespace parlem.domain.Models
 {
     public static class UserRoles
     {

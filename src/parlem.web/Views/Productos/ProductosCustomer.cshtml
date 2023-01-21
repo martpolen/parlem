@@ -1,0 +1,87 @@
+﻿@model IEnumerable<parlem.web.Models.ProductViewModel>
+
+@{
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+    ViewData["Title"] = "View";
+}
+
+<h1>Productos contratados por el cliente</h1>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProductName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProductTypeName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.numeracioTerminal)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SoldAt)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CustomerId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FamilyName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.phone)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ProductName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ProductTypeName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.numeracioTerminal)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SoldAt)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CustomerId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FamilyName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.phone)
+                </td>
+                <td>
+                    @Html.ActionLink("Ver Detalles", "Details", new { id=item.Id }) |                    
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<div>
+    @Html.ActionLink("Volver a la lista", "Customers","Customers")
+</div>
+
+@section Scripts{
+    <script>
+        $(document).ready(function () {
+            $(".table").DataTable();
+        });
+    </script>
+}

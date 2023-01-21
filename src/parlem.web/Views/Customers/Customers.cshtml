@@ -1,0 +1,83 @@
+﻿@model IEnumerable<parlem.web.Models.CustomerModel>
+
+@{
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+    ViewData["Title"] = "Customers";
+}
+
+<h1>Lista de clientes</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Id
+            </th>
+            <th>
+                DocType
+            </th>
+            <th>
+                DocNum
+            </th>
+            <th>
+                Email
+            </th>
+            <th>
+                CustomerId
+            </th>
+            <th>
+                GivenName
+            </th>
+            <th>
+                FamilyName
+            </th>
+            <th>
+                phone
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DocType)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DocNum)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Email)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CustomerId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.GivenName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FamilyName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.phone)
+                </td>
+                <td>
+                    @Html.ActionLink("Ver productos contratados", "ProductosCustomer", "Productos", new { id=item.CustomerId  })
+
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@section Scripts{
+    <script>
+        $(document).ready(function () {
+            $(".table").DataTable();
+        });
+    </script>
+}

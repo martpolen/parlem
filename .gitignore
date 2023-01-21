@@ -6,3 +6,8 @@
 /src/parlem-api/parlem.api/parlem.api/obj
 /src/parlem.web/bin/Debug/netcoreapp3.1
 /src/parlem.web/obj
+/src/parlem.common/parlem.common/bin/Debug/netcoreapp3.1
+/src/parlem.common/parlem.common/obj/Debug/netcoreapp3.1
+/src/parlem.common/parlem.common/obj
+/src/parlem.domain/parlem.domain/obj
+/src/parlem.domain/parlem.domain/bin/Debug/netcoreapp3.1

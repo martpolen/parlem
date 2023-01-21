@@ -5,7 +5,11 @@ VisualStudioVersion = 17.4.33122.133
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "parlem.api", "parlem.api\parlem.api.csproj", "{4C0EE14F-7CDD-4ADF-AC0A-1DFE32D79773}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "parlem.web", "..\..\parlem.web\parlem.web.csproj", "{8D10775A-8020-4268-85F5-9088DACCE168}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "parlem.web", "..\..\parlem.web\parlem.web.csproj", "{8D10775A-8020-4268-85F5-9088DACCE168}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "parlem.domain", "..\..\parlem.domain\parlem.domain\parlem.domain.csproj", "{5B211338-EC98-4B22-AD4C-6721A92E4BE3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "parlem.common", "..\..\parlem.common\parlem.common\parlem.common.csproj", "{F18FE3E6-3CCB-4966-86F4-983B068DC935}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +25,14 @@ Global
 		{8D10775A-8020-4268-85F5-9088DACCE168}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8D10775A-8020-4268-85F5-9088DACCE168}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8D10775A-8020-4268-85F5-9088DACCE168}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B211338-EC98-4B22-AD4C-6721A92E4BE3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B211338-EC98-4B22-AD4C-6721A92E4BE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B211338-EC98-4B22-AD4C-6721A92E4BE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B211338-EC98-4B22-AD4C-6721A92E4BE3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F18FE3E6-3CCB-4966-86F4-983B068DC935}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F18FE3E6-3CCB-4966-86F4-983B068DC935}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F18FE3E6-3CCB-4966-86F4-983B068DC935}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F18FE3E6-3CCB-4966-86F4-983B068DC935}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

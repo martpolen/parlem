@@ -5,13 +5,9 @@
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
+    <h1 class="display-4">Portal de clientes</h1>
 
-    <div class="col-lg-1">
-        <form asp-page-handler="CallAPI" method="post">
-            <button class="btn btn-default">Call API</button>
-        </form>
-        <br />
-    </div>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <a asp-controller="Customers" asp-action="Customers">Ver clientes</a>
+   
+    <p>Prueba técnica para Parlem Telecom desarrollada por Martín Márquez Rivero</p>
 </div>

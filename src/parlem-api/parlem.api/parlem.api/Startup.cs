@@ -1,4 +1,3 @@
-using JWTAuthentication.Authentication;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -8,9 +7,13 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.IdentityModel.Tokens;
+using parlem.api.Services;
+using parlem.domain.Abstract;
+using parlem.domain.Concrete;
+using parlem.domain.Entities;
 using System.Text;
 
-namespace JWTAuthentication
+namespace parlem.api
 {
     public class Startup
     {
@@ -56,6 +59,12 @@ namespace JWTAuthentication
                     IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Configuration["JWT:Secret"]))
                 };
             });
+
+            services.AddScoped<IRepository<Customers>, EfRepository<Customers>>();
+            services.AddScoped<IRepository<Producto>, EfRepository<Producto>>();
+
+            services.AddScoped<ICustomerService, CustomerService>();
+            services.AddScoped<IProductoService, ProductosService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
