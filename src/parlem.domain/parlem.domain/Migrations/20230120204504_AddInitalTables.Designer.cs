@@ -6,11 +6,11 @@ using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using parlem.domain.Concrete;
 
-namespace JWTAuthentication.Migrations
+namespace parlem.domain.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20230121080649_AddAudit")]
-    partial class AddAudit
+    [Migration("20230120204504_AddInitalTables")]
+    partial class AddInitalTables
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -216,15 +216,12 @@ namespace JWTAuthentication.Migrations
                     b.ToTable("AspNetUserTokens");
                 });
 
-            modelBuilder.Entity("parlem.api.Domain.Customers", b =>
+            modelBuilder.Entity("parlem.api.Authentication.Customers", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("BorradoPorId")
-                        .HasColumnType("nvarchar(450)");
 
                     b.Property<int>("CustomerId")
                         .HasColumnType("int");
@@ -241,67 +238,32 @@ namespace JWTAuthentication.Migrations
                     b.Property<string>("FamilyName")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime?>("FechaDelete")
-                        .HasColumnType("datetime");
-
-                    b.Property<DateTime?>("FechaInsert")
-                        .HasColumnType("datetime");
-
-                    b.Property<DateTime?>("FechaUpdate")
-                        .HasColumnType("datetime");
-
                     b.Property<string>("GivenName")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("IdSeccion")
                         .HasColumnType("int");
 
-                    b.Property<string>("UserInsert")
-                        .HasColumnType("nvarchar(450)")
-                        .HasMaxLength(450);
-
-                    b.Property<string>("UserUpdate")
-                        .HasColumnType("nvarchar(450)")
-                        .HasMaxLength(450);
-
                     b.Property<string>("phone")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("BorradoPorId");
-
-                    b.HasIndex("UserInsert");
-
-                    b.HasIndex("UserUpdate");
-
                     b.ToTable("Customers");
                 });
 
-            modelBuilder.Entity("parlem.api.Domain.Producto", b =>
+            modelBuilder.Entity("parlem.api.Authentication.Producto", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("BorradoPorId")
-                        .HasColumnType("nvarchar(450)");
-
                     b.Property<int>("CustomerId")
                         .HasColumnType("int");
 
                     b.Property<string>("FamilyName")
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime?>("FechaDelete")
-                        .HasColumnType("datetime");
-
-                    b.Property<DateTime?>("FechaInsert")
-                        .HasColumnType("datetime");
-
-                    b.Property<DateTime?>("FechaUpdate")
-                        .HasColumnType("datetime");
 
                     b.Property<int>("IdSeccion")
                         .HasColumnType("int");
@@ -315,14 +277,6 @@ namespace JWTAuthentication.Migrations
                     b.Property<DateTime>("SoldAt")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("UserInsert")
-                        .HasColumnType("nvarchar(450)")
-                        .HasMaxLength(450);
-
-                    b.Property<string>("UserUpdate")
-                        .HasColumnType("nvarchar(450)")
-                        .HasMaxLength(450);
-
                     b.Property<int>("numeracioTerminal")
                         .HasColumnType("int");
 
@@ -331,13 +285,7 @@ namespace JWTAuthentication.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("BorradoPorId");
-
                     b.HasIndex("CustomerId");
-
-                    b.HasIndex("UserInsert");
-
-                    b.HasIndex("UserUpdate");
 
                     b.ToTable("Producto");
                 });
@@ -393,40 +341,13 @@ namespace JWTAuthentication.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("parlem.api.Domain.Customers", b =>
+            modelBuilder.Entity("parlem.api.Authentication.Producto", b =>
                 {
-                    b.HasOne("JWTAuthentication.Authentication.ApplicationUser", "BorradoPor")
-                        .WithMany()
-                        .HasForeignKey("BorradoPorId");
-
-                    b.HasOne("JWTAuthentication.Authentication.ApplicationUser", "CreadoPor")
-                        .WithMany()
-                        .HasForeignKey("UserInsert");
-
-                    b.HasOne("JWTAuthentication.Authentication.ApplicationUser", "ModificadoPor")
-                        .WithMany()
-                        .HasForeignKey("UserUpdate");
-                });
-
-            modelBuilder.Entity("parlem.api.Domain.Producto", b =>
-                {
-                    b.HasOne("JWTAuthentication.Authentication.ApplicationUser", "BorradoPor")
-                        .WithMany()
-                        .HasForeignKey("BorradoPorId");
-
-                    b.HasOne("parlem.api.Domain.Customers", "Customers")
+                    b.HasOne("parlem.api.Authentication.Customers", "Customers")
                         .WithMany()
                         .HasForeignKey("CustomerId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-
-                    b.HasOne("JWTAuthentication.Authentication.ApplicationUser", "CreadoPor")
-                        .WithMany()
-                        .HasForeignKey("UserInsert");
-
-                    b.HasOne("JWTAuthentication.Authentication.ApplicationUser", "ModificadoPor")
-                        .WithMany()
-                        .HasForeignKey("UserUpdate");
                 });
 #pragma warning restore 612, 618
         }

@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace JWTAuthentication.Migrations
+namespace parlem.domain.Migrations
 {
     public partial class AddInitalTables : Migration
     {

@@ -11,3 +11,6 @@
 /src/parlem.common/parlem.common/obj
 /src/parlem.domain/parlem.domain/obj
 /src/parlem.domain/parlem.domain/bin/Debug/netcoreapp3.1
+/src/parlem.test/parlem.test/bin/Debug/netcoreapp3.1
+/src/parlem.test/parlem.test/obj/Debug/netcoreapp3.1
+/src/parlem.test/parlem.test/obj

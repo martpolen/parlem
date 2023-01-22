@@ -7,9 +7,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "parlem.api", "parlem.api\pa
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "parlem.web", "..\..\parlem.web\parlem.web.csproj", "{8D10775A-8020-4268-85F5-9088DACCE168}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "parlem.domain", "..\..\parlem.domain\parlem.domain\parlem.domain.csproj", "{5B211338-EC98-4B22-AD4C-6721A92E4BE3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "parlem.domain", "..\..\parlem.domain\parlem.domain\parlem.domain.csproj", "{5B211338-EC98-4B22-AD4C-6721A92E4BE3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "parlem.common", "..\..\parlem.common\parlem.common\parlem.common.csproj", "{F18FE3E6-3CCB-4966-86F4-983B068DC935}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "parlem.common", "..\..\parlem.common\parlem.common\parlem.common.csproj", "{F18FE3E6-3CCB-4966-86F4-983B068DC935}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "parlem.test", "..\..\parlem.test\parlem.test\parlem.test.csproj", "{F6913F79-DCA5-491C-9428-A02D5129E3FC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{F18FE3E6-3CCB-4966-86F4-983B068DC935}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F18FE3E6-3CCB-4966-86F4-983B068DC935}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F18FE3E6-3CCB-4966-86F4-983B068DC935}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6913F79-DCA5-491C-9428-A02D5129E3FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6913F79-DCA5-491C-9428-A02D5129E3FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6913F79-DCA5-491C-9428-A02D5129E3FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6913F79-DCA5-491C-9428-A02D5129E3FC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
